@@ -1,0 +1,26 @@
+[
+  {
+    "questionText": "What is the capital of France?",
+    "correctAnswer": "Paris"
+  },
+  {
+    "questionText": "Which planet is known as the Red Planet?",
+    "correctAnswer": "Mars"
+  },
+  {
+    "questionText": "How many continents are there on Earth?",
+    "correctAnswer": "7"
+  },
+  {
+    "questionText": "What is the largest mammal on Earth?",
+    "correctAnswer": "Blue Whale"
+  },
+  {
+    "questionText": "Who wrote the play 'Romeo and Juliet'?",
+    "correctAnswer": "William Shakespeare"
+  },
+  {
+    "questionText": "What is the chemical symbol for gold?",
+    "correctAnswer": "Au"
+  }
+]
