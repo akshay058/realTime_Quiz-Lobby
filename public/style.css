@@ -1,0 +1,80 @@
+/* public/style.css */
+
+/* Basic styling for the body */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f0f0f0;
+  color: #333;
+}
+
+/* Header styles */
+h1 {
+  text-align: center;
+  background-color: #333;
+  color: #fff;
+  padding: 10px;
+  margin: 0;
+}
+
+/* Container for user input and actions */
+.container {
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Input field styles */
+label {
+  font-weight: bold;
+}
+
+input[type="text"] {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+
+/* Button styles */
+button {
+  padding: 10px 20px;
+  background-color: #333;
+  color: #fff;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #555;
+}
+
+/* Room list styles */
+#roomList {
+  margin-top: 20px;
+}
+
+#roomList div {
+  margin-bottom: 10px;
+}
+
+/* Users in room list styles */
+#usersInRoom {
+  margin-top: 20px;
+}
+
+#usersInRoom div {
+  margin-bottom: 5px;
+}
+
+/* Game status styles */
+#gameStatus {
+  margin-top: 20px;
+  font-weight: bold;
+}

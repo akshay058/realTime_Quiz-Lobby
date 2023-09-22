@@ -1,0 +1,30 @@
+<h1>Welcome to Room: <%= room.name %></h1>
+
+<div id="room-info">
+  <h2>Room Information</h2>
+  <p>Name: <%= room.name %></p>
+  <p>Capacity: <%= room.maxUsers %></p>
+</div>
+
+<div id="users-list">
+  <h2>Users in this Room</h2>
+  <ul>
+    <% room.users.forEach(user => { %>
+    <li><%= user %></li>
+    <% }); %>
+  </ul>
+</div>
+
+<% if (currentUserRoom && currentUserRoom.toString() === room._id.toString()) {
+%>
+<p>You are currently in this room.</p>
+<form action="/rooms/leave" method="POST">
+  <button type="submit">Leave Room</button>
+</form>
+<% } else { %>
+<form action="/rooms/<%= room._id %>/join" method="POST">
+  <label for="username">Enter Your Username:</label>
+  <input type="text" id="username" name="username" required />
+  <button type="submit">Join Room</button>
+</form>
+<% } %>

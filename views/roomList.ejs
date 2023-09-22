@@ -1,0 +1,54 @@
+<!-- views/roomList.ejs -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Socket.io Lobby</title>
+  </head>
+  <body>
+    <h1>Lobby</h1>
+
+    <!-- User Input -->
+    <div>
+      <label for="username">Username:</label>
+      <input id="username" placeholder="Enter your username" />
+    </div>
+
+    <!-- User Actions -->
+    <div>
+      <button id="createRoomButton">Create Room</button>
+      <button id="joinRoomButton">Join Room</button>
+      <button id="startGameButton">Start Game</button>
+      <button id="leaveRoomButton">Leave Room</button>
+      <button id="joinMatchmakingButton">Join Matchmaking</button>
+    </div>
+
+    <!-- Message for No Available Rooms -->
+    <div id="noAvailableRoomsMessage" style="display: none; color: red">
+      No available rooms. Creating a new room for you.
+    </div>
+
+    <!-- List of Available Rooms -->
+    <h2>Available Rooms:</h2>
+    <div id="roomList">
+      <% rooms.forEach(function(room) { %>
+      <div>
+        <button onclick="joinRoom('<%= room.name %>')">
+          <%= room.name %> (<%= room.users.length %>/2)
+        </button>
+      </div>
+      <% }); %>
+    </div>
+
+    <!-- Users in Current Room -->
+    <h2>Users in Current Room:</h2>
+    <div id="usersInRoom"></div>
+
+    <!-- Game Status -->
+    <h2>Game Status:</h2>
+    <div id="gameStatus"></div>
+
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="/client.js"></script>
+  </body>
+</html>
