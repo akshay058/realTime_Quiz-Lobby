@@ -1,6 +1,6 @@
 // config/database.js
 module.exports = {
-  url: "mongodb://localhost:27017/lobby-app",
+  url: process.env.MONGO_URL,
   options: {
     useNewUrlParser: true,
     useUnifiedTopology: true,

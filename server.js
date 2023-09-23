@@ -7,9 +7,14 @@ const socketIO = require("socket.io");
 const mongoose = require("mongoose");
 const path = require("path");
 
+const dotenv = require("dotenv");
+
 const app = express();
 const server = http.createServer(app);
 const io = socketIO(server);
+
+//config env
+dotenv.config();
 
 // Load MongoDB configuration
 const dbConfig = require("./config/database");
@@ -42,6 +47,9 @@ app.use(express.static(path.join(__dirname, "public")));
 // Define routes
 const roomRoutes = require("./routes/roomRoutes");
 app.use("/rooms", roomRoutes);
+app.get("/", (req, res) => {
+  res.redirect("/rooms");
+});
 
 // Set up Socket.IO
 io.on("connection", (socket) => {

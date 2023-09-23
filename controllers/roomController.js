@@ -72,9 +72,6 @@ exports.joinRoom = async (req, res) => {
     return res.status(500).json({ error: err.message });
   }
 };
-
-// controllers/roomController.js
-
 // Leave a room
 exports.leaveRoom = async (req, res) => {
   try {
